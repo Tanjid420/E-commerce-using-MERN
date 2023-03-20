@@ -26,7 +26,7 @@ export default function Home() {
             <p className="text-[20px] mb-4 mt-4 ml-1">
               All the necessities at your doorstep
             </p>
-            <Link href="/SelectCategories">
+            <Link href="/ProductCategories">
               <button class="relative -top-1 -left-1 bg-gray-800 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 h-[50px] w-[150px] mt-[3rem] ml-1">
                 Get Started
               </button>
