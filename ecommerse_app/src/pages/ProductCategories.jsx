@@ -7,19 +7,21 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Categories from "./Categories";
 
+import Link from "next/link";
+import ElectronicProducts from "./ElectronicProducts";
+
 const ProductCategories = (props) => {
+
+  
   return (
     <React.Fragment>
-       <div className=" grid grid-cols-2 gap-4">
-        {/* <div className="  w-[500px]  space-y-7 ">  */}
-          {/* <Card sx={{ display: "grid" }}>
-          <CardContent sx={{ flex: "1 0 auto" }}> */}
-                {/* <Typography className="" component="div" variant="h5"> */}
+       <div className=" grid grid-cols-2 place-content-center gap-4">
+        
           {Categories.map((categorycard) => (
                   
-                    <CategoryCard className="grid grid-cols-1" categorycard={categorycard} />
+                  <Link href="/ElectronicProducts"><CategoryCard className="grid grid-cols-1 place-content-center" categorycard={categorycard}/></Link>
           ))}
-                    {/* </Typography> */}
+                   
             </div> 
                   
 
