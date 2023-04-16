@@ -13,6 +13,7 @@ const Navbar = (props) => {
   return (
     <React.Fragment>
       <div className="w-[100%] h-[64px] flex justify-between items-center border-2">
+        <Link href="/">
         <div className="flex justify-between">
           <img
             className=" pl-[.5rem] w-16 h-16 my-4 "
@@ -21,6 +22,7 @@ const Navbar = (props) => {
           />
           <h1 className="text-[2rem] py-8 pl-[1rem] ">Dokandar</h1>
         </div>
+        </Link>
 
         <div className="ml-[2rem] border-2 h-[35px] rounded-xl outline-none flex justify-between ">
           <form className="flex">

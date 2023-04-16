@@ -2,6 +2,8 @@ import Navbar from "@/Components/Navbar";
 import React from "react";
 import products from "./Products";
 import RatingProduct from "@/Components/RatingProduct";
+import Link from "next/link";
+import ProductScreen from "..";
 
 const ElectronicProducts = (props) => {
   return (
@@ -13,21 +15,26 @@ const ElectronicProducts = (props) => {
       {products.map((product) => {
         return (
           <div className="" key={product._id}>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" >
-              <a href={`/product/${product._id}`} >
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <Link
+                href={product._id}
+              >
                 <img class="rounded-t-lg " src={product.image} alt="" />
-              </a>
+              </Link>
 
               <div class="p-5">
-                <a href="#">
+                <Link href={product._id}>
                   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {product.name}
                   </h5>
-                </a>
+                </Link>
                 {/* <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                   {product.description}
                 </p> */}
-                <RatingProduct value={product.rating} text={` ${product.numReviews}  reviews`}/>
+                <RatingProduct
+                  value={product.rating}
+                  text={` ${product.numReviews}  reviews`}
+                />
                 <h5 className="mb-3  font-bold ">Price ${product.price}</h5>
 
                 <a
