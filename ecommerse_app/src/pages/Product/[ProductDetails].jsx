@@ -1,11 +1,42 @@
 import React from 'react'
 import RatingProduct from '@/Components/RatingProduct'
 import Products from '../Products'
+import { useRouter } from 'next/router'
+
+
+// export const getStaticPaths = ()=>{
+//     const paths = Products.map(product=>{
+//         return {
+//             params: {id: product._id}
+//         }
+//       })
+
+//       return {
+//         paths,
+//         fallback: false
+//       }
+      
+// }
+
+// export const getStaticProps = (context)=>{
+//     const id = context.params.id
+//     const productData = Products
+//     const data = Products
+
+//     return {
+//         props: {product: data}
+//     }
+
+// }
+
+
 
 const ProductDetails = () => {
-  const product = Products.find(({_id})=> _id === _id) 
-
-  
+    
+   
+    const product_id = useRouter().query.ProductDetails
+    
+  const product = Products.find((p)=> p._id === product_id)
 
 
    
